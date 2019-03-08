@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../style/bootstrap.css" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/bootstrap.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/main.css"/>
 </head>
 
 <body>
@@ -45,19 +47,315 @@
         </div>
     </div>
 
-    <section id="content-section">
+    <style scoped>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+    
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        /* ======================expandable content======================== */
+        .expandable-zone {
+            position: relative;
+            width: 100%;
+        }
         
-    </section>
+        .expandable-zone > h3 {
+            font-weight: bold;
+            background-color: #474e5d;
+            color: white;
+            text-align: center;
+    
+            transition: all 500ms;
+        }
+    
+        .expandable-zone:hover > h3 {
+            background-color: white;
+            outline: 3px solid #474e5d;
+            color: #474e5d;
+        }
+    
+        .expandable-zone:hover > .expandable-content {
+            visibility: visible;
+            opacity: 1;
+            z-index: 999;
+        }
+    
+        .expandable-content {
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 85%;
+            height: 1500%;
+            padding: 50px;
+            border: 5px solid #474e5d;
+            border-bottom-left-radius: 15px;
+            background-color: #2b3e50;
+            color: white;
+    
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+    
+            overflow-y: scroll;
+    
+            transition: all 500ms;
+        }
+    
+        .expandable-content > img {
+            width: 100%;
+        }
 
-    <footer class="footer">
-        <div class="container">
-            <p>
-                Mamadou Grieco |
-                Français 4 EF |
-                Le musée de Québec
-            </p>
-        </div>
-    </footer>
+        .expandable-content-above {
+            top: -1500%;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 15px;
+        }
+    
+        /* ==============================timeline=================================*/
+        .timeline {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+        }
+    
+        .timeline td {
+            width: 50%;
+            padding: 30px;
+            transition: all 500ms;
+        }
+    
+        .content.right:hover {
+            background-color: lightgray;
+            color: #2b3e50;
+            box-shadow: 5px 10px 18px #888888;
+        }
+    
+        .content.left:hover {
+            background-color: lightgray;
+            color: #2b3e50;
+            box-shadow: -5px 10px 18px #888888;
+        }
+    
+        .left {
+            border-right: 10px solid #474e5d;
+        }
+    
+        .right {
+            border-left: 10px solid #474e5d;
+        }
+    
+        .natives > .left, .natives > .right, .natives > .left::after {
+            border-color: green;
+        }
+    
+        .french > .left, .french > .right, .french > .left::after {
+            border-color: blue;
+        }
+    
+        .english > .left, .english > .right, .english > .left::after {
+            border-color: brown;
+        }
+    
+        .independent > .left, .independent > .right, .independent > .left::after {
+            border-color: red;
+        }
+    
+        .year {
+            position: relative;
+        }
+    
+        .left {
+            text-align: right;
+        }
+        
+        td {
+            position: relative;
+        }
+    
+        tr > td.left::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border: 4px solid #ff0000;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(100% - 7px);
+            top: -3px;
+            z-index: 1;
+            transition: all 500ms;
+        }
+    </style>
+
+    <section id="content-section">
+        <table class="timeline">
+            <tbody>
+                <tr class="natives">
+                    <td class="year left">
+                        <h1>La préhistoire (- 1533)</h1>
+                    </td>
+        
+                    <td class="content right">
+                        <p>
+                            Les indigènes habitaient au Québec.
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Algonquins.jpg/800px-Algonquins.jpg"/>
+                                <p>Les gens algonquin au territoire du Québec [<i><a href="https://en.wikipedia.org/wiki/Algonquin_people#/media/File:Algonquins.jpg">Wikipedia</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    
+                <tr class="french">
+                    <td class="content left">
+                        <p>
+                            Jacques Cartier navigua à la nouvelle terre pour la France. Il vint à la rivière du Saint-Laurent.
+                            <sup><a href="https://www.history.com/topics/exploration/jacques-cartier">1</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Jacques_Cartier_1851-1852.jpg/800px-Jacques_Cartier_1851-1852.jpg"/>
+                                <p>Jacques Cartier [<i><a href="https://en.wikipedia.org/wiki/Jacques_Cartier#/media/File:Jacques_Cartier_1851-1852.jpg">Wikipedia</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+    
+                    <td class="year right">
+                        <h1>1534</h1>
+                    </td>
+                </tr>
+    
+                <tr class="french">
+                    <td class="year left">
+                        <h1>1608</h1>
+                    </td>
+        
+                    <td class="content right">
+                        <p>
+                            Samuel de Champlain a découvert la ville de Québec. Il construisit la Place Royale. Le Québec devint une colonie de la France.
+                            <sup><a href="https://www.britannica.com/biography/Samuel-de-Champlain">2</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content">
+                                <img src="https://cdn.britannica.com/s:700x450/80/105180-004-7AAFEE94.jpg"/>
+                                <p>Champlain et sa route [<i><a href="https://www.britannica.com/biography/Samuel-de-Champlain">Encyclopedia Britannica</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    
+                <tr class="french">
+                    <td class="content left">
+                        <p>
+                            La Guerre de Sept Ans, entre les Anglais et les Français.
+                            <sup><a href="https://www.thecanadianencyclopedia.ca/en/article/seven-years-war">3</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content">
+                                <img src="https://tce-live2.s3.amazonaws.com/media/media/ea7e8555-9481-4ebb-9585-dc9a4abd22d8.jpg"/>
+                                <p>La Bataille aux Plaines d'Abraham [<i><a href="https://www.thecanadianencyclopedia.ca/en/article/battle-of-the-plains-of-abraham#">The Canadian Encyclopedia</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+    
+                    <td class="year right">
+                        <h1>1756-1763</h1>
+                    </td>
+                </tr>
+    
+                <tr class="english">
+                    <td class="year left">
+                        <h1>1763</h1>
+                    </td>
+        
+                    <td class="content right">
+                        <p>
+                            Le traité de Paris, les Français donnèrent leurs colonies au Canada aux Anglais. Le nom de la terre devint la Province de Québec.
+                            <sup><a href="https://www.thecanadianencyclopedia.ca/en/article/seven-years-war">4</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content">
+                                <img src="https://static1.squarespace.com/static/5a96eda83c3a539c1c4aa54d/5ab1b4b6b2a84dd9badfb172/5b36f2d888251b4f1d52d633/1530352856655/treaty+of+paris.jpg?format=1500w"/>
+                                <p>Le traité de Paris [<i><a href="https://www.founderoftheday.com/founder-of-the-day/beresford">Founder of the Day</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    
+                <tr class="english">
+                    <td class="content left">
+                        <p>
+                            Le Mouvement Romantisme.
+                            <sup><a href="https://www.britannica.com/art/Romanticism">5</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content expandable-content-above">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/1024px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg"/>
+                                <p>"Liberty Leading the People" par Eugène Delacroix [<i><a href="https://en.wikipedia.org/wiki/Liberty_Leading_the_People#/media/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg">Wikipedia</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+    
+                    <td class="year right">
+                        <h1>1770-1850</h1>
+                    </td>
+                </tr>
+    
+                <tr class="independent">
+                    <td class="year left">
+                        <h1>6/1/1867</h1>
+                    </td>
+        
+                    <td class="content right">
+                        <p>
+                            La loi d’Amérique du Nord Anglais fit passer, et les Provinces au territoire du Canada devint indépendant.
+                            <sup><a href="https://www.history.com/this-day-in-history/canadian-independence-day">6</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content expandable-content-above">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Jubilee_celebrations_on_Parliament_Hill.jpg"/>
+                                <p>Les gens célébrèrent la fête Canada (1927) [<i><a href="https://en.wikipedia.org/wiki/Canada_Day#/media/File:Jubilee_celebrations_on_Parliament_Hill.jpg">Wikimedia Commons</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    
+                <tr class="independent">
+                    <td class="content left">
+                        <p>
+                            Le Mouvement Art-Déco.
+                            <sup><a href="https://www.theartstory.org/movement-art-deco.htm">7</a></sup>
+                        </p>
+                        <div class="expandable-zone">
+                            <h3>+</h3>
+                            <div class="expandable-content expandable-content-above">
+                                <img src="http://www.ontarioarchitecture.com/deco/decorigablue500.jpg"/>
+                                <p>Riga Latvia [<i><a href="http://www.ontarioarchitecture.com/artdeco.htm">Ontario Architecture</a></i>]</p>
+                            </div>
+                        </div>
+                    </td>
+    
+                    <td class="year right">
+                        <h1>1900-1945</h1>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

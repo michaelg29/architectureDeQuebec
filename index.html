@@ -42,6 +42,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="content/sitesweb.html">Les sites-web</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bg-primary" data-toggle="dropdown" href="#" id="influence_dropdown">Les Détails <span class="caret"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="influence_dropdown">
+                            <a class="dropdown-item" href="#">Le Projet: Le Musée de Québec</a>
+                            <a class="dropdown-item" href="#">Par Mamadou Grieco</a>
+                            <a class="dropdown-item" href="#">Français 4 AB</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,21 +78,19 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="card mb-3">
-                            <h3 class="card-header">Les Influences</h3>
+                            <h3 class="card-header">Les influences</h3>
                             <div class="card-body">
                                 <h5 class="card-title">Il depicte les influences </h5>
                             </div>
                             <img style="height: 200px; width: 100%; display: block;" src="" alt="Card image">
                             <div class="card-footer">
-                                <div class="btn-group" role="group" aria-label="influences" style="min-width: 100%;">
-                                    <div class="btn-group show" role="group" style="width: 100%">
-                                        <a id="btnGroupDrop1" class="btn btn-primary dropdown-toggle btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                        <div class="dropdown-menu show" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                            <a class="dropdown-item" href="content/influences/francais.html" style="font-size: 20px">L’influence française</a>
-                                            <a class="dropdown-item" href="content/influences/anglais.html" style="font-size: 20px">L’influence anglaise</a>
-                                            <a class="dropdown-item" href="content/influences/romantique.html" style="font-size: 20px">L’influence romantique</a>
-                                            <a class="dropdown-item" href="content/influences/art-deco.html" style="font-size: 20px">L’influence art-déco</a>
-                                        </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle bg-primary btn-lg btn-block" data-toggle="dropdown" href="#" id="influence_card" style="color: white; text-decoration: none;">Les influences <span class="caret"></span></a>
+                                    <div class="dropdown-menu" aria-labelledby="influence_card">
+                                        <a class="dropdown-item" href="content/influences/francais.html" style="font-size: 20px">L’influence française</a>
+                                        <a class="dropdown-item" href="content/influences/anglais.html" style="font-size: 20px">L’influence anglaise</a>
+                                        <a class="dropdown-item" href="content/influences/romantique.html" style="font-size: 20px">L’influence romantique</a>
+                                        <a class="dropdown-item" href="content/influences/art-deco.html" style="font-size: 20px">L’influence art-déco</a>
                                     </div>
                                 </div>
                             </div>
@@ -105,16 +112,6 @@
             </p>
         </div>
     </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>
-                Mamadou Grieco |
-                Français 4 EF |
-                Le musée de Québec
-            </p>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
