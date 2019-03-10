@@ -22,3 +22,22 @@ html, body, section {
     text-align: center;
     padding: 30px;
 }
+
+span[tooltip="true"] {
+    position: relative;
+}
+
+span[tooltip="true"]:hover::after {
+    content: attr(tooltip-data);
+}
+
+span[tooltip="true"][tooltip-position="top"]:hover::after {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    padding: 15px;
+    color: white;
+    background-color: #373a3c;
+    border-radius: 8px;
+    font-size: 12px;
+}
