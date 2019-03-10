@@ -7,7 +7,7 @@ $(document).ready(function() {
         $(this).find(".img-link").find("a").html(src_title);
     });
 
-    $("#navbar").load("nav.html #main-nav");
+    $("#navbar").load("/nav.html #main-nav");
 /*
     $.get("/nav.html", function(nav_html) {
         $("#navbar").html(nav_html);

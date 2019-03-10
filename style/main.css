@@ -33,6 +33,8 @@ span[tooltip="true"][tooltip-position="top"]:hover::after, .img-link {
 
 span[tooltip="true"] {
     position: relative;
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 
 span[tooltip="true"]:hover::after {
