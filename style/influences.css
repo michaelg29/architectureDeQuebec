@@ -1,16 +1,5 @@
 /*==========================expandable content==============================*/
 
-/*
-<span class="expandable-zone">
-                            <span>l’aile Lescot du Louvre</span>
-                            <div class="expandable content">
-                                <div class="img-section">
-                                    <img class="img-with-link" style="width: 100%; display: block;" src="https://www.flickr.com/photos/ffenestr/5414304291" src-title="flickr" alt="l’aile Lescot du Louvre">
-                                </div>
-                            </div>
-                        </span>
-*/
-
 .expandable-zone {
     background-color: #373a3c;
     color: white;
@@ -43,7 +32,7 @@
     width: 100%;
 }
 
-.expandable-zone:hover + .expandable-content {
+.expandable-zone:hover > .expandable-content {
     visibility: visible;
     z-index: 9999;
     opacity: 1;

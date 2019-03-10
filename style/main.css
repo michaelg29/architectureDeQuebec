@@ -78,3 +78,8 @@ span[tooltip="true"][tooltip-position="top"]:hover::after {
 iframe.map {
     width: 100%;
 }
+
+.img-with-link {
+    width: 100%; 
+    display: block;
+}
