@@ -18,4 +18,11 @@ $(document).ready(function() {
 
         $(this).append("<p class=\"img-link\">Source: <a target=\"_blank\" href=\"" + src + "\">" + src_title + "</a></p>");
     });
+
+    $(".footnote").each(function() {
+        var href = $(this).attr("href");
+        var num = $(this).attr("num");
+
+        $(this).append("<sup><a target=\"_blank\" href=\"" + href + "\">" + num + "</a></sup>");
+    });
 });
