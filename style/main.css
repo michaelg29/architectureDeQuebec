@@ -102,3 +102,8 @@ iframe.map {
 .img-col img {
     width: 100%;
 }
+
+sup > a {
+    color: red;
+    text-decoration: underline;
+}
