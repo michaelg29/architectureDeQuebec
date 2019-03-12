@@ -68,7 +68,7 @@ span[tooltip="true"][tooltip-position="top"]:hover::after {
     opacity: 0;
 
     position: absolute;
-    top: calc(50% - 23px);
+    top: calc(100% - 46px - 10px);
     left: 20%;
 
     width: 60%;
