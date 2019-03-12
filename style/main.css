@@ -31,7 +31,7 @@ p {
 }
 
 span[tooltip="true"][tooltip-position="top"]:hover::after, .img-link {
-    padding: 15px;
+    padding: 15px 0;
     color: white;
     background-color: #373a3c;
     border-radius: 8px;
@@ -46,11 +46,15 @@ span[tooltip="true"] {
 
 span[tooltip="true"]:hover::after {
     content: attr(tooltip-data);
+    position: absolute;
+    width: 100px;
+    overflow: hidden;
+    text-indent: 0px;
+    text-align: center;
 }
 
 span[tooltip="true"][tooltip-position="top"]:hover::after {
-    position: absolute;
-    left: 0;
+    left: calc(50% - 50px);
     bottom: 100%;
 }
 

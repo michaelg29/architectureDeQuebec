@@ -28,4 +28,11 @@ $(document).ready(function() {
 
         num++;
     });
+
+    $("definition").each(function() {
+        var original = $(this).html();
+        var definition = $(this).attr("def");
+
+        $(this).replaceWith("<span tooltip=\"true\" tooltip-position=\"top\" tooltip-data=\"'" + definition + "'\">" + original + "</span>");
+    });
 });
