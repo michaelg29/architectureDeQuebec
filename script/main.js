@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#navbar").load("/nav.html #main-nav");
+    $("#navbar").load("/architectureDeQuebec/nav.html #main-nav");
 
     $("span.expandable-zone").each(function() {
         var img_src = $(this).attr("img-src");
