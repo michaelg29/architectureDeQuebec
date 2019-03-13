@@ -25,7 +25,7 @@ p {
     padding: 30px 100px;
 }
 
-@media (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     #content-section {
         padding: 30px 0px;
     }
