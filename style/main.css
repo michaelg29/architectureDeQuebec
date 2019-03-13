@@ -43,6 +43,10 @@ p {
     .navbar-brand {
         overflow-x: hidden;
     }
+
+    .pagination-bar > .row > [class*="col-"] {
+        padding-bottom: 15px;
+    }
 }
 
 .footer {
