@@ -31,8 +31,13 @@ p {
     }
 
     h1 {
-        font-size: 36px;
         text-align: center;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    h1.display-3 {
+        display: none;
     }
 }
 
