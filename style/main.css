@@ -39,6 +39,10 @@ p {
     h1.display-3 {
         display: none;
     }
+
+    .navbar-brand {
+        overflow-x: hidden;
+    }
 }
 
 .footer {
