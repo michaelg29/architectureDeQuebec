@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
     jQuery.noConflict();
 
-    jQuery("#navbar").load("../nav.html #main-nav");
+    jQuery("#navbar").load("/architectureDeQuebec/nav.html #main-nav");
 
     jQuery("span.expandable-zone").each(function() {
         var img_src = jQuery(this).attr("img-src");
